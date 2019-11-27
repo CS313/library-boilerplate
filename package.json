@@ -1,0 +1,88 @@
+{
+   "name": "library-boilerplate",
+   "version": "1.0.0",
+   "description": "component-library-template",
+   "main": "dist/index.js",
+   "scripts": {
+      "build": "rollup -c",
+      "start": "rollup -c -w && npm run prettier-watch",
+      "test": "npm run lint && jest",
+      "prettier": "onchange 'src/**/*' -- prettier --write {{changed}}",
+      "lint": "eslint src/**/* --ext .ts,.tsx --fix",
+      "pre-commit": "npm run test && lint-staged"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/CS313/library-boilerplate.git"
+   },
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/CS313/library-boilerplate/issues"
+   },
+   "homepage": "https://github.com/CS313/library-boilerplate#readme",
+   "engines": {
+      "node": "^10.16.3",
+      "npm": "^6.9.0"
+   },
+   "files": [
+      "./dist"
+   ],
+   "peerDependencies": {
+      "react": "^16.12.0",
+      "react-dom": "^16.12.0"
+   },
+   "typings": "dist/index",
+   "module": "dist/index.es.js",
+   "jsnext:main": "dist/index.es.js",
+   "devDependencies": {
+      "@svgr/rollup": "^4.3.3",
+      "@types/jest": "^24.0.23",
+      "@types/react": "^16.9.13",
+      "@types/react-dom": "^16.9.4",
+      "@typescript-eslint/eslint-plugin": "^2.9.0",
+      "@typescript-eslint/parser": "^2.9.0",
+      "babel-eslint": "^10.0.3",
+      "eslint": "^6.7.1",
+      "eslint-config-prettier": "^6.7.0",
+      "eslint-config-react-app": "^5.0.2",
+      "eslint-loader": "^3.0.2",
+      "eslint-plugin-flowtype": "^4.5.2",
+      "eslint-plugin-import": "^2.18.2",
+      "eslint-plugin-jsx-a11y": "^6.2.3",
+      "eslint-plugin-prettier": "^3.1.1",
+      "eslint-plugin-react": "^7.16.0",
+      "eslint-plugin-react-hooks": "^2.3.0",
+      "husky": "^3.1.0",
+      "jest": "^24.9.0",
+      "lint-staged": "^9.5.0",
+      "onchange": "6.1.0",
+      "prettier": "^1.19.1",
+      "react": "^16.12.0",
+      "react-dom": "^16.12.0",
+      "rollup": "^1.27.5",
+      "rollup-plugin-babel": "^4.3.3",
+      "rollup-plugin-commonjs": "^10.1.0",
+      "rollup-plugin-node-resolve": "^5.2.0",
+      "rollup-plugin-peer-deps-external": "^2.2.0",
+      "rollup-plugin-postcss": "^2.0.3",
+      "rollup-plugin-typescript2": "^0.25.2",
+      "rollup-plugin-url": "^3.0.1",
+      "ts-jest": "^24.2.0",
+      "typescript": "^3.7.2"
+   },
+   "husky": {
+      "hooks": {
+         "pre-commit": "lint-staged"
+      }
+   },
+   "lint-staged": {
+      "*.{js,css,json,md}": [
+         "prettier --write",
+         "git add"
+      ]
+   },
+   "dependencies": {
+      "identity-obj-proxy": "^3.0.0"
+   }
+}

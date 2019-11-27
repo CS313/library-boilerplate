@@ -1,0 +1,21 @@
+{
+   "compilerOptions": {
+      "target": "es5",
+      "module": "es6",
+      "moduleResolution": "node",
+      "lib": ["es6", "dom"],
+      "sourceMap": true,
+      "jsx": "react",
+      "strict": true,
+      "noImplicitReturns": true,
+      "esModuleInterop": true,
+      "resolveJsonModule": true,
+      "rootDirs": ["src"],
+      "outDir": "dist",
+      "skipLibCheck": true,
+      "isolatedModules": false,
+      "baseUrl": "src"
+   },
+   "include": ["**/*.ts", "**/*.tsx"],
+   "exclude": ["node_modules", "dist", "src/**/*.test.(tsx|ts)"]
+}
