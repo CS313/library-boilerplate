@@ -17,5 +17,5 @@
       "baseUrl": "src"
    },
    "include": ["**/*.ts", "**/*.tsx"],
-   "exclude": ["node_modules", "dist", "src/**/*.test.(tsx|ts)"]
+   "exclude": ["node_modules", "dist", "src/**/*.test.(tsx|ts)", "src/**/*.stories.tsx"]
 }
